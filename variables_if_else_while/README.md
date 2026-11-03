@@ -2,3 +2,4 @@
 - 1-last_digit.c: Specifies whether n is higher than 5, lower than 6 or equal to 0.
 - 2-print_alphabet.c: Prints the alphabet in lowercase followed by a new line.
 - 3-print_alphabets.c: prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+- 4-print_alphabt.c: Prints the alphabet in lowercase except for q and e followed by a new line.
