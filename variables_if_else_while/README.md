@@ -1,3 +1,4 @@
 - 0-positive_or_negative.c: assigns a random number to n and specifies whether it's positive or negative.
 - 1-last_digit.c: Specifies whether n is higher than 5, lower than 6 or equal to 0.
 - 2-print_alphabet.c: Prints the alphabet in lowercase followed by a new line.
+- 3-print_alphabets.c: prints the alphabet in lowercase, and then in uppercase, followed by a new line.
