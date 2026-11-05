@@ -8,3 +8,4 @@
 - 5-sign.c: prints the sign of a number.
 - 6-abs.c: computes the absolute value of an integer.
 - 7-print_last_digit.c: prints the last digit of a number.
+- 8-24_hours.c: prints every minute of the day.
