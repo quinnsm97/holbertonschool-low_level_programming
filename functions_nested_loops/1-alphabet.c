@@ -1,9 +1,11 @@
-#include "void print_alphabet(void)"
+#include "main.h"
 
 /**
-  * print alphabet - prints the lowercase alphabet then a new line
+  * print_alphabet - prints the lowercase alphabet then a new line
   *
-  * Returns : 0
+  * Description: prints the lowercase alphabet then a new line
+  *
+  * Returns: void
   */
 
 void print_alphabet(void)
@@ -12,10 +14,8 @@ void print_alphabet(void)
 
 	for (i = 97; i <= 122; i++)
 	{
-		putchar(i);
+		_putchar(i);
 	}
 
-	putchar('\n');
-
-		return (0);
+	_putchar('\n');
 }
