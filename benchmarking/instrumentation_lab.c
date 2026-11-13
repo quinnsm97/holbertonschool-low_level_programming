@@ -93,9 +93,6 @@ int main(void)
     total_end = clock();
     total_elapsed = (double)(total_end - total_start) / CLOCKS_PER_SEC;
 
-    if (checksum == 0ul)
-        printf("impossible\n");
-
     /* Required output (exact format, no extra lines):
      * TOTAL seconds: <float>
      * BUILD_DATA seconds: <float>
