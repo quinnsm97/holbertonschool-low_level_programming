@@ -2,7 +2,7 @@
 
 ## Measurement Methodology
 
-The purpose of this experiment was to investigate how algorithmic efficiency affects execution time and the potential environmental impact of software. Three experiments were conducted using C programs compiled with GCC using the flags `-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-long-long`.
+Three experiments were conducted using C programs compiled with GCC using the flags `-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-long-long`.
 
 The baseline experiment measured the execution time of a loop performing 100 million iterations. Three runs were recorded to account for minor variations in execution time.
 
@@ -46,7 +46,7 @@ Processing the dataset was the slowest of the three stages, accounting for the l
 
 ## Relation Between Runtime and Energy Consumption
 
-Execution time and energy consumption are related because a program that completes its work more quickly may require less total energy, assuming similar hardware and operating conditions.
+Execution time and energy consumption are related because a program that completes its work more quickly may require less total energy, assuming similar hardware and operating conditions.A longer runtime generally means the CPU remains active for a longer period while completing the task. This can indicate greater energy consumption, although actual energy usage also depends on processor power draw and hardware conditions.
 
 The comparison between the naive and single-pass algorithms suggests that choosing a more efficient algorithm could reduce the time a processor spends performing a particular task. At scale, improvements like these could contribute to lower energy requirements, particularly in applications that process large datasets or execute frequently.
 
@@ -54,7 +54,7 @@ However, execution time alone does not establish actual energy consumption. Meas
 
 ## Limitations of the Experiment
 
-There are several limitations to these results:
+There are a few limitations to these results:
 
 - Each experiment was performed only three times, providing a limited sample size.
 - Background processes and operating system activity may have influenced execution times.
@@ -68,4 +68,4 @@ The main takeaway is that algorithmic efficiency is an important part of sustain
 
 Software engineers should consider algorithm complexity, avoid unnecessary processing and measure performance before attempting optimisation. Instrumentation is particularly useful because it identifies which parts of a program consume the most execution time.
 
-Writing efficient software can contribute to reduced computing resource requirements. Although this experiment did not directly measure energy consumption, it demonstrates why performance optimisation is an important consideration when developing more sustainable software.g
+Writing efficient software can contribute to reduced computing resource requirements. Although this experiment did not directly measure energy consumption, it demonstrates why performance optimisation is an important consideration when developing more sustainable software.
