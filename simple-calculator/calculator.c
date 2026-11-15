@@ -5,6 +5,7 @@ void welcome_line(void);
 void display_menu(void);
 int get_choice(void);
 int add(int a, int b);
+int subtract(int a, int b);
 
 int main (void)
 {
@@ -20,14 +21,25 @@ int main (void)
         
         if (choice == 1)
     {    
-        printf("A: ");
-        scanf("%d", &a);
+            printf("A: ");
+            scanf("%d", &a);
 
-        printf("B: ");
-        scanf("%d", &b);
-        
-        add(a, b);
+            printf("B: ");
+            scanf("%d", &b);
+            
+            add(a, b);
     }
+
+        if (choice == 2)
+        {
+            printf("A: ");
+            scanf("%d", &a);
+
+            printf("B: ");
+            scanf("%d", &b);
+            
+            subtract(a, b);
+        }
     } while (choice != 0);
 
     if (choice == 0)
@@ -78,4 +90,11 @@ int add(int a, int b)
     printf("Result: %d\n", (a + b));
 
     return (a + b);
+}
+
+int subtract(int a, int b)
+{
+    printf("Result: %d\n", (a - b));
+
+    return (a - b);
 }
