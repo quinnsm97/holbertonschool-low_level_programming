@@ -7,6 +7,7 @@ int get_choice(void);
 int add(int a, int b);
 int subtract(int a, int b);
 int multiply(int a, int b);
+double divide(double a, double b);
 
 int main (void)
 {
@@ -51,6 +52,17 @@ int main (void)
             scanf("%d", &b);
             
             multiply(a, b);
+        }
+
+        if (choice == 4)
+        {
+            printf("A: ");
+            scanf("%d", &a);
+
+            printf("B: ");
+            scanf("%d", &b);
+            
+            divide(a, b);
         }
     } while (choice != 0);
 
@@ -116,4 +128,17 @@ int multiply(int a, int b)
     printf("Result: %d\n", (a * b));
 
     return (a * b);
+}
+
+double divide(double a, double b)
+{
+    if (b == 0)
+        {
+            printf("Error: division by zero\n");
+        } else
+        {
+            printf("Result: %.2f\n", (a / b));
+            return (a / b);
+        }
+    return (0);
 }
