@@ -3,14 +3,24 @@
 /* Function Prototypes */
 void welcome_line(void);
 void display_menu(void);
-void get_choice(void);
+int get_choice(void);
 
 int main (void)
 {
-    welcome_line();
-    display_menu();
-    get_choice();
+    int choice;
 
+    welcome_line();
+    do
+    {
+        display_menu();
+        choice = get_choice();
+    } while (choice != 0);
+
+    if (choice == 0)
+    {
+        printf("Bye!\n");
+        return (choice);
+    }
     return (0);   
 }
 
@@ -29,17 +39,17 @@ void display_menu(void)
     printf("0) Quit\n");
 }
 
-void get_choice(void)
+int get_choice(void)
 {
     int choice;
 
     printf("Choice: ");
     scanf("%d", &choice);
 
-    if (choice == 0)
+    if (choice < 0 || choice > 4)
     {
-        printf("Bye!");
-        return;
+        printf("Invalid choice\n");
     }
+    return (choice);
 
 }
