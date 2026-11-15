@@ -4,16 +4,30 @@
 void welcome_line(void);
 void display_menu(void);
 int get_choice(void);
+int add(int a, int b);
 
 int main (void)
 {
     int choice;
+    int a;
+    int b;
 
     welcome_line();
     do
     {
         display_menu();
-        choice = get_choice();
+        choice = get_choice(); 
+        
+        if (choice == 1)
+    {    
+        printf("A: ");
+        scanf("%d", &a);
+
+        printf("B: ");
+        scanf("%d", &b);
+        
+        add(a, b);
+    }
     } while (choice != 0);
 
     if (choice == 0)
@@ -21,6 +35,9 @@ int main (void)
         printf("Bye!\n");
         return (choice);
     }
+
+
+    
     return (0);   
 }
 
@@ -50,6 +67,15 @@ int get_choice(void)
     {
         printf("Invalid choice\n");
     }
+
+
     return (choice);
 
+}
+
+int add(int a, int b)
+{
+    printf("Result: %d\n", (a + b));
+
+    return (a + b);
 }
