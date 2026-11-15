@@ -6,6 +6,7 @@ void display_menu(void);
 int get_choice(void);
 int add(int a, int b);
 int subtract(int a, int b);
+int multiply(int a, int b);
 
 int main (void)
 {
@@ -39,6 +40,17 @@ int main (void)
             scanf("%d", &b);
             
             subtract(a, b);
+        }
+
+        if (choice == 3)
+        {
+            printf("A: ");
+            scanf("%d", &a);
+
+            printf("B: ");
+            scanf("%d", &b);
+            
+            multiply(a, b);
         }
     } while (choice != 0);
 
@@ -97,4 +109,11 @@ int subtract(int a, int b)
     printf("Result: %d\n", (a - b));
 
     return (a - b);
+}
+
+int multiply(int a, int b)
+{
+    printf("Result: %d\n", (a * b));
+
+    return (a * b);
 }
