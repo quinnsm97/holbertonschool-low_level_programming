@@ -13,9 +13,9 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *cats;
-	int l1 = 0;
-	int l2 = 0;
-	int i = 0;
+	unsigned int l1 = 0;
+	unsigned int l2 = 0;
+	unsigned int i = 0;
 
 	if (s1 == NULL)
 	{
@@ -50,6 +50,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		cats[l1 + i] = s2[i];
 	}
-	cats[l1 + i] = '\0'
+	cats[l1 + i] = '\0';
 	return (cats);
 }
