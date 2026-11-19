@@ -36,7 +36,7 @@ int _atoi(char *s)
 			return (0);
 		}
 
-		result = result * 10 - digit;
+		result = result * 10 + digit;
 		i++;
 	}
 
