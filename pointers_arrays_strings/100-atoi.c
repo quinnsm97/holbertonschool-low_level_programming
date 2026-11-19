@@ -33,7 +33,7 @@ int _atoi(char *s)
 
 		if (result > (2147483647 - digit) / 10)
 		{
-			return (-2147483648);
+			return (0);
 		}
 
 		result = result * 10 - digit;
