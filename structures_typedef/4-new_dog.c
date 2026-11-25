@@ -2,6 +2,37 @@
 #include <stdlib.h>
 
 /**
+  * copy_string - copys a string into a new ptr
+  * @str: string to be copied
+  *
+  * Return: pointer to copied string
+  */
+
+char *copy_string(char *str)
+{
+	int i;
+	int j;
+	char *newstr;
+
+	i = 0;
+
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+
+	newstr = malloc(sizeof(char) * (i + 1));
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		newstr[i] = str[i];
+	}
+	newstr[i] = str[i];
+
+	return (newstr);
+}
+
+/**
   * new_dog - creates a new dog
   * @name: pointer to name
   * @age: age of dog
@@ -48,19 +79,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newdog);
 		return (NULL);
 	}
-	for (i = 0; name[i] != '\0'; i++)
-	{
-		newname[i] = name[i];
-	}
-	newname[i] = name[i];
-	for (i = 0; owner[i] != '\0'; i++)
-	{
-		newowner[i] = owner[i];
-	}
-	newowner[i] = owner[i];
-	newdog->name = newname;
+	newdog->name = copy_string(name);
 	newdog->age = age;
-	newdog->owner = newowner;
-
+	newdog->owner = copy_string(owner);
 	return (newdog);
 }
