@@ -30,7 +30,7 @@ char *copy_string(char *str)
 	{
 		newstr[i] = str[i];
 	}
-	newstr[i] = '\0'
+	newstr[i] = '\0';
 
 	return (newstr);
 }
