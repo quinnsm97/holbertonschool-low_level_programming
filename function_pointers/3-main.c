@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
 	if (op == NULL)
 	{
-		printf("Error\n")
+		printf("Error\n");
 		return (99);
 	}
 	b = atoi(argv[3]);
